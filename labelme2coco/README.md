@@ -1,6 +1,6 @@
 # Labelme2COCO
 
-## 准备工作
+### 准备工作
 
 所有图片文件放置在`images/total2019`文件夹下
 
@@ -30,3 +30,18 @@ python ./labelme2coco.py --input_dir ./labelme/val2019 --output_dir ./annotation
 python ./labelme2coco.py --input_dir ./labelme/test2019 --output_dir ./annotations/test2019 --filename instances_test2019 --labels labels.txt
 ```
 
+
+
+### 数据集生成2
+
+在train2019文件夹中放置img和json
+
+```
+python labelme2coco2.py train2019 --output train2019.json
+```
+
+得到train2019.json
+
+运行COCO_Image_Viewer.ipynb查看数据集情况
+
+参考：https://github.com/Tony607/labelme2coco
